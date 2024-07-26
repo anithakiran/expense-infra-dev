@@ -6,6 +6,7 @@
   - expense-dev-bastion
   - expense-dev-app_alb
   - expense-dev-vpn
+  
   expense-dev-vpn :
   - name : vpn_public
     desc : vpn accepting connectiosn from public
