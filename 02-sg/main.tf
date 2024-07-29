@@ -96,6 +96,16 @@ resource "aws_security_group_rule" "backend_app_alb" {
   security_group_id = module.backend.sg_id
 }
 
+resource "aws_security_group_rule" "app_alb_vpn" {
+  type              = "ingress"
+  from_port         = 80
+  to_port           = 80
+  protocol          = "tcp"
+  source_security_group_id = module.vpn.sg_id # source is where you are getting traffic from
+  security_group_id = module.app_alb.sg_id
+}
+
+
 resource "aws_security_group_rule" "backend_vpn_http" {
   type              = "ingress"
   from_port         = 8080

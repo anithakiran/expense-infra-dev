@@ -52,6 +52,7 @@
     port : 8080
     
   frontend :
+  - name : frontend_web
   - name : frontend_public
     desc : frontend accepting connections from public
     source : public
