@@ -1,25 +1,24 @@
 variable "project_name" {
-    default = "expense"
+  default = "expense"
 }
 
 variable "environment" {
-    default = "dev"
+  default = "dev"
 }
 
-
 variable "common_tags" {
-    default = {
-      Project = "expense"
-      Environment = "dev"
-      Terraform = "true"
-    }
+  default = {
+    Project = "expense"
+    Environment = "dev"
+    Terraform = "true"
+  }
 }
 
 variable "db_sg_description" {
   default = "SG for DB MySQL Instances"
 }
 
-variable "vpn_rules" {
+variable "vpn_sg_rules" {
   default = [
     {
         from_port = 943

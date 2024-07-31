@@ -1,6 +1,6 @@
 resource "aws_key_pair" "vpn" {
   key_name   = "openvpn"
-  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILgwFbJTkrDX9893fqlNFdGv/stz4W8DqcBKYOPSHSb6 ANITHA@LAPTOP-ABTH6DBN"
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKcAKDCwREMQzrTaRjEkchJApM96ig/tRDQhmpNnFDya ANITHA@LAPTOP-ABTH6DBNssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKcAKDCwREMQzrTaRjEkchJApM96ig/tRDQhmpNnFDya ANITHA@LAPTOP-ABTH6DBN"
   #public_key = file("D:/Applications/openvpn.pub")
 }
 
