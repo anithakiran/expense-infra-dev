@@ -8,7 +8,7 @@ terraform {
 backend "s3" {
 
     bucket = "terraform-s3-buckets-ec2" 
-    key = "expense-dev-mysql"
+    key = "expense-dev-app-alb"
     region = "us-east-1"
     dynamodb_table = "daws78s-lock"
  }

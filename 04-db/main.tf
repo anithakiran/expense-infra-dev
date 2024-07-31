@@ -74,6 +74,7 @@ module "records" {
       name    = "db-${var.environment}"
       type    = "CNAME"
       ttl = 1
+      allow_overwrite = true
       records = [
         module.db.db_instance_address
       ]
