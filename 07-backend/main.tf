@@ -41,7 +41,7 @@ resource "null_resource" "backend" {
     } 
 }
 
-resource "aws_ec2_instance_state" "backend" {
+/* resource "aws_ec2_instance_state" "backend" {
   instance_id = module.backend.id
   state       = "stopped"
   depends_on = [ null_resource.backend ]
@@ -177,4 +177,4 @@ resource "aws_lb_listener_rule" "backend" {
       values = ["backend.app-${var.environment}.${var.zone_name}"]
     }
   }
-}
+} */
