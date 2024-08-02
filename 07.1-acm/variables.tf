@@ -19,3 +19,7 @@ variable "common_tags" {
 variable "zone_name" {
     default = "devopsaws78s.online"
 }
+
+variable "zone_id" {
+    default = "Z03403861P6Y03NKIX68I"
+}
