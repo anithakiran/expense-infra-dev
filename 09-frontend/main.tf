@@ -57,13 +57,6 @@ resource "null_resource" "frontend_delete" {
       instance_id = module.frontend.id 
     }
 
-    connection {
-        type     = "ssh"
-        user     = "ec2-user"
-        password = "DevOps321"
-        host     = module.frontend.public_ip
-    }
-
     provisioner "local-exec" {
         command = "aws ec2 terminate-instances --instance-ids ${module.frontend.id}"
     } 

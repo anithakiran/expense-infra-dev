@@ -80,5 +80,5 @@
   bastion:
   - name: bastion_public
     desc: bastion accepting connections from public
-    source: public #idealy your home IP address/32
+    source: public
     port: 22

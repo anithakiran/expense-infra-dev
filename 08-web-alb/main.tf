@@ -34,12 +34,13 @@ resource "aws_lb_listener" "http" {
   }
 }
 
-resource "aws_lb_listener" "https" {
-  load_balancer_arn = aws_lb.web_alb.arn
+ resource "aws_lb_listener" "https" {
+ load_balancer_arn = aws_lb.web_alb.arn
   port              = "443"
-  protocol          = "TLS"
-  certificate_arn   = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"
-  alpn_policy       = "HTTP2Preferred"
+  protocol          = "HTTPS"
+  certificate_arn = data.aws_ssm_parameter.acm_certificate_arn.value
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+
 
   default_action {
     type             = "fixed-response"
@@ -47,12 +48,12 @@ resource "aws_lb_listener" "https" {
 
     fixed_response {
         content_type = "text/html"
-        message_body = "<h1>This is fixed response from WEB ALB https </h1>"
+        message_body = "<h1>This is fixed response from WEB ALB HTTPS </h1>"
         status_code = "200"
     }
   }
-}
-
+ }
+ 
 
 
 module "records" {
