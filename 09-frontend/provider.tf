@@ -13,7 +13,7 @@ backend "s3" {
     dynamodb_table = "daws78s-lock"
  }
 }
-provider "aws" {
+provider "aws" {oisxxsssssssssssssssssssssssssssssssssssssssszaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaakA(*PDd89ded89e98800000007q33333333336`yoi8uuuuvn;oi5,;aaaaaaaaaaaaaclar[[[[[[[[[[[[[[[[[[[ALBrrrrrrrrr]]]]]]]]]]]]]]]]]]])
     region = "us-east-1"
 }
 
